@@ -1,0 +1,14 @@
+C:\Users\basom\Desktop\reti\Proj\Proj\bin\Debug\net8.0\Proj.exe
+C:\Users\basom\Desktop\reti\Proj\Proj\bin\Debug\net8.0\Proj.deps.json
+C:\Users\basom\Desktop\reti\Proj\Proj\bin\Debug\net8.0\Proj.runtimeconfig.json
+C:\Users\basom\Desktop\reti\Proj\Proj\bin\Debug\net8.0\Proj.dll
+C:\Users\basom\Desktop\reti\Proj\Proj\bin\Debug\net8.0\Proj.pdb
+C:\Users\basom\Desktop\reti\Proj\Proj\obj\Debug\net8.0\Proj.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\basom\Desktop\reti\Proj\Proj\obj\Debug\net8.0\Proj.AssemblyInfoInputs.cache
+C:\Users\basom\Desktop\reti\Proj\Proj\obj\Debug\net8.0\Proj.AssemblyInfo.cs
+C:\Users\basom\Desktop\reti\Proj\Proj\obj\Debug\net8.0\Proj.csproj.CoreCompileInputs.cache
+C:\Users\basom\Desktop\reti\Proj\Proj\obj\Debug\net8.0\Proj.dll
+C:\Users\basom\Desktop\reti\Proj\Proj\obj\Debug\net8.0\refint\Proj.dll
+C:\Users\basom\Desktop\reti\Proj\Proj\obj\Debug\net8.0\Proj.pdb
+C:\Users\basom\Desktop\reti\Proj\Proj\obj\Debug\net8.0\Proj.genruntimeconfig.cache
+C:\Users\basom\Desktop\reti\Proj\Proj\obj\Debug\net8.0\ref\Proj.dll
