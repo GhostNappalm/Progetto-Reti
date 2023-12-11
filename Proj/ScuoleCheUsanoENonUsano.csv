@@ -1,51 +1,31 @@
 DominioScuola;StatoDominio;Output;Google_Or_Microsoft
-liceopagano.gov.it                                        ;Corretto;;NON USA
-itcbesta.gov.it                                           ;Corretto;;NON USA
-comprensivo5colettitv.gov.it                              ;Corretto;;NON USA
+liceopagano.edu.it                                        ;Modificato; liceopagano.edu.it 	primary name server = ns.abdns.biz 	responsible mail addr = postmaster.arubabusiness.it 	serial  = 2019092512 	refresh = 10800 (3 hours) 	retry   = 3600 (1 hour) 	expire  = 604800 (7 days) 	default TTL = 3600 (1 hour)  liceopagano.edu.it	MX preference = 10, mail exchanger = alt3.aspmx.l.google.com liceopagano.edu.it	MX preference = 1, mail exchanger = aspmx.l.google.com liceopagano.edu.it	MX preference = 5, mail exchanger = alt1.aspmx.l.google.com liceopagano.edu.it	MX preference = 5, mail exchanger = alt2.aspmx.l.google.com liceopagano.edu.it	MX preference = 10, mail exchanger = alt4.aspmx.l.google.com ;USA
+itcbesta.edu.it                                           ;Modificato; itcbesta.edu.it	text =  	"MS=ms13689431" itcbesta.edu.it	text =  	"v=spf1 include:_spf.google.com ~all"  itcbesta.edu.it	MX preference = 5, mail exchanger = ALT2.ASPMX.L.GOOGLE.COM itcbesta.edu.it	MX preference = 10, mail exchanger = ALT4.ASPMX.L.GOOGLE.COM itcbesta.edu.it	MX preference = 10, mail exchanger = ALT3.ASPMX.L.GOOGLE.COM itcbesta.edu.it	MX preference = 1, mail exchanger = ASPMX.L.GOOGLE.COM itcbesta.edu.it	MX preference = 5, mail exchanger = ALT1.ASPMX.L.GOOGLE.COM ;USA
+comprensivo5colettitv.edu.it                              ;Modificato; comprensivo5colettitv.edu.it 	primary name server = ns-596.awsdns-10.net 	responsible mail addr = awsdns-hostmaster.amazon.com 	serial  = 1 	refresh = 7200 (2 hours) 	retry   = 900 (15 mins) 	expire  = 1209600 (14 days) 	default TTL = 86400 (1 day)  comprensivo5colettitv.edu.it	MX preference = 20, mail exchanger = alt1.aspmx.l.google.com comprensivo5colettitv.edu.it	MX preference = 20, mail exchanger = alt2.aspmx.l.google.com comprensivo5colettitv.edu.it	MX preference = 30, mail exchanger = alt3.aspmx.l.google.com comprensivo5colettitv.edu.it	MX preference = 30, mail exchanger = alt4.aspmx.l.google.com comprensivo5colettitv.edu.it	MX preference = 10, mail exchanger = aspmx.l.google.com ;USA
 Non Disponibile;ND;ND;ND
 Non Disponibile;ND;ND;ND
-istitutocomprensivosantateresagallura.gov.it              ;Corretto;;NON USA
+istitutocomprensivosantateresagallura.edu.it              ;Errato;Er;Er
 Non Disponibile;ND;ND;ND
-icfabrizia.gov.it                                         ;Corretto;;NON USA
+icfabrizia.edu.it                                         ;Modificato; icfabrizia.edu.it 	primary name server = dns.technorail.com 	responsible mail addr = hostmaster.icfabrizia.edu.it 	serial  = 1 	refresh = 86400 (1 day) 	retry   = 7200 (2 hours) 	expire  = 2592000 (30 days) 	default TTL = 3600 (1 hour)  icfabrizia.edu.it	MX preference = 10, mail exchanger = mx.icfabrizia.edu.it ;NON USA
 Non Disponibile;ND;ND;ND
-ics.caprarola.it                                          ;Corretto;;NON USA
-ictvb.it                                                  ;Corretto;;NON USA
+ics.caprarola.it                                          ;Errato;Er;Er
+ictvb.it                                                  ;Errato;Er;Er
 Non Disponibile;ND;ND;ND
-comprensivofalconecascina.it                              ;Corretto;;NON USA
-istcomprensivocapodrise.it                                    ;Corretto;;NON USA
-cigna-baruffi-garelli.edu.it                              ;Corretto;;NON USA
+comprensivofalconecascina.it                              ;Errato;Er;Er
+istcomprensivocapodrise.it                                    ;Errato;Er;Er
+cigna-baruffi-garelli.edu.it                              ;Corretto; cigna-baruffi-garelli.edu.it	text =  	"v=spf1 include:_spf.google.com ~all include:spf.host.it -all" cigna-baruffi-garelli.edu.it	text =  	"google-site-verification=MsMNURQWf3gMPpWo6QghESFLb4rdPtyPbvFkJ6_d2Uc"  cigna-baruffi-garelli.edu.it	MX preference = 5, mail exchanger = ALT2.ASPMX.L.GOOGLE.COM cigna-baruffi-garelli.edu.it	MX preference = 10, mail exchanger = ALT3.ASPMX.L.GOOGLE.COM cigna-baruffi-garelli.edu.it	MX preference = 5, mail exchanger = ALT1.ASPMX.L.GOOGLE.COM cigna-baruffi-garelli.edu.it	MX preference = 1, mail exchanger = ASPMX.L.GOOGLE.COM ;USA
 Non Disponibile;ND;ND;ND
-scuolegelagaccio.it                                       ;Corretto;;NON USA
-icbagolino.gov.it                                         ;Corretto;;NON USA
-icbagnacavallo.gov.it                                   ;Corretto;;NON USA
-icsalessandrinicesanob.it                                 ;Corretto;;NON USA
-icvillafrancadasti.edu.it                                 ;Corretto;;NON USA
-istitutocomprensivonovi2.it                                   ;Corretto;;NON USA
-aldomoroseriate.gov.it                                    ;Corretto;;NON USA
-icmantova1.gov.it                                         ;Corretto;;NON USA
+scuolegelagaccio.it                                       ;Errato;Er;Er
+icbagolino.edu.it                                         ;Modificato; icbagolino.edu.it	text =  	"v=spf1 a mx ip4:149.202.212.196 ?all"  icbagolino.edu.it	MX preference = 10, mail exchanger = mailserver.argo-mail.com ;NON USA
+icbagnacavallo.edu.it                                   ;Modificato; icbagnacavallo.edu.it	text =  	"v=spf1 include:_spf.google.com ~all"  icbagnacavallo.edu.it	MX preference = 10, mail exchanger = ALT4.ASPMX.L.GOOGLE.COM icbagnacavallo.edu.it	MX preference = 5, mail exchanger = ALT2.ASPMX.L.GOOGLE.COM icbagnacavallo.edu.it	MX preference = 5, mail exchanger = ALT1.ASPMX.L.GOOGLE.COM icbagnacavallo.edu.it	MX preference = 1, mail exchanger = ASPMX.L.GOOGLE.COM icbagnacavallo.edu.it	MX preference = 10, mail exchanger = ALT3.ASPMX.L.GOOGLE.COM ;USA
+icsalessandrinicesanob.it                                 ;Corretto; icsalessandrinicesanob.it 	primary name server = dns.technorail.com 	responsible mail addr = hostmaster.technorail.com 	serial  = 1 	refresh = 86400 (1 day) 	retry   = 7200 (2 hours) 	expire  = 2592000 (30 days) 	default TTL = 3600 (1 hour)  icsalessandrinicesanob.it	MX preference = 10, mail exchanger = mx.icsalessandrinicesanob.it ;NON USA
+icvillafrancadasti.edu.it                                 ;Corretto; icvillafrancadasti.edu.it 	primary name server = ns1.digitalocean.com 	responsible mail addr = hostmaster.icvillafrancadasti.edu.it 	serial  = 1615129447 	refresh = 10800 (3 hours) 	retry   = 3600 (1 hour) 	expire  = 604800 (7 days) 	default TTL = 1800 (30 mins)  icvillafrancadasti.edu.it	MX preference = 1, mail exchanger = aspmx.l.google.com icvillafrancadasti.edu.it	MX preference = 10, mail exchanger = alt4.aspmx.l.google.com icvillafrancadasti.edu.it	MX preference = 5, mail exchanger = alt2.aspmx.l.google.com icvillafrancadasti.edu.it	MX preference = 5, mail exchanger = alt1.aspmx.l.google.com icvillafrancadasti.edu.it	MX preference = 10, mail exchanger = alt3.aspmx.l.google.com ;USA
+istitutocomprensivonovi2.it                                   ;Errato;Er;Er
+aldomoroseriate.edu.it                                    ;Modificato; aldomoroseriate.edu.it	text =  	"v=spf1 include:_spf.aruba.it ~all"  aldomoroseriate.edu.it	MX preference = 10, mail exchanger = mx.aldomoroseriate.edu.it ;NON USA
+icmantova1.edu.it                                         ;Modificato; icmantova1.edu.it	text =  	"v=spf1 include:_spf.google.com ~all"  icmantova1.edu.it	MX preference = 5, mail exchanger = alt2.aspmx.l.google.com icmantova1.edu.it	MX preference = 5, mail exchanger = alt1.aspmx.l.google.com icmantova1.edu.it	MX preference = 1, mail exchanger = aspmx.l.google.com icmantova1.edu.it	MX preference = 10, mail exchanger = aspmx2.googlemail.com icmantova1.edu.it	MX preference = 10, mail exchanger = aspmx3.googlemail.com ;USA
 Non Disponibile;ND;ND;ND
-icdonmilanikr.it                                          ;Corretto;;NON USA
-icsondriocentro.gov.it                                    ;Corretto;;NON USA
-vergagela.gov.it                                          ;Corretto;;NON USA
+icdonmilanikr.it                                          ;Corretto; icdonmilanikr.it 	primary name server = katja.ns.cloudflare.com 	responsible mail addr = dns.cloudflare.com 	serial  = 2327604104 	refresh = 10000 (2 hours 46 mins 40 secs) 	retry   = 2400 (40 mins) 	expire  = 604800 (7 days) 	default TTL = 1800 (30 mins)  icdonmilanikr.it	MX preference = 5, mail exchanger = _dc-mx.5b6ad4cf98c5.icdonmilanikr.it icdonmilanikr.it	MX preference = 1, mail exchanger = _dc-mx.5b6ad4cf98c5.icdonmilanikr.it ;NON USA
+icsondriocentro.edu.it                                    ;Modificato; icsondriocentro.edu.it 	primary name server = ns1.digitalocean.com 	responsible mail addr = hostmaster.icsondriocentro.edu.it 	serial  = 1701613737 	refresh = 10800 (3 hours) 	retry   = 3600 (1 hour) 	expire  = 604800 (7 days) 	default TTL = 1800 (30 mins)  icsondriocentro.edu.it	MX preference = 10, mail exchanger = alt3.aspmx.l.google.com icsondriocentro.edu.it	MX preference = 10, mail exchanger = alt4.aspmx.l.google.com icsondriocentro.edu.it	MX preference = 5, mail exchanger = alt1.aspmx.l.google.com icsondriocentro.edu.it	MX preference = 1, mail exchanger = aspmx.l.google.com icsondriocentro.edu.it	MX preference = 5, mail exchanger = alt2.aspmx.l.google.com ;USA
+vergagela.edu.it                                          ;Modificato; vergagela.edu.it	text =  	"v=spf1 include:_spf.google.com ~all"  vergagela.edu.it	MX preference = 5, mail exchanger = ALT2.ASPMX.L.GOOGLE.COM vergagela.edu.it	MX preference = 10, mail exchanger = ALT4.ASPMX.L.GOOGLE.COM vergagela.edu.it	MX preference = 1, mail exchanger = ASPMX.L.GOOGLE.COM vergagela.edu.it	MX preference = 5, mail exchanger = ALT1.ASPMX.L.GOOGLE.COM vergagela.edu.it	MX preference = 10, mail exchanger = ALT3.ASPMX.L.GOOGLE.COM ;USA
 Non Disponibile;ND;ND;ND
-icsanluca-bovalino.gov.it                                 ;Corretto;;NON USA
-ipssarmargherita.gov.it                                   ;Corretto;;NON USA
-iismarconiguarasci.gov.it                          ;Corretto;;NON USA
-scuolasturzo.gov.it                                       ;Corretto;;NON USA
-icsannilo.gov.it                                          ;Corretto;;NON USA
-icsangiovannibianco.gov.it                                ;Corretto;;NON USA
-icsangiulio.gov.it                                        ;Corretto;;NON USA
-istitutocomprensivoserre.gov.it                           ;Corretto;;NON USA
-pietrodomina.gov.it                                       ;Corretto;;NON USA
-ict1aormina.it                                          ;Corretto;;NON USA
-iclucatelli.gov.it                                            ;Corretto;;NON USA
-istitutocomprensivolattedolce-agro.it                     ;Corretto;;NON USA
-iticarate.gov.it                                          ;Corretto;;NON USA
-icsfogazzarotrissino.it                                   ;Corretto;;NON USA
-cittadellascuola.gov.it                                   ;Corretto;;NON USA
-icvialeangelicuneo.it                                     ;Corretto;;NON USA
-cdpavullo.villaggioscuola.edu.it                          ;Corretto;;NON USA
-icspadrepinopuglisi.edu.it                                ;Corretto;;NON USA
-iisgaribaldimacerata.gov.it                               ;Corretto;;NON USA
-icgiuliolusi.gov.it                                       ;Corretto;;NON USA
-istitutomontalcino.com                                    ;Corretto;;NON USA
+icsanluca-bovalino.edu.it                                 ;Modificato; icsanluca-bovalino.edu.it	text =  	"google-site-verification=mN6GGITXExE9own9ISF1tz_PSCKCPd3oeQ4gM6cfFgY"  icsanluca-bovalino.edu.it	MX preference = 1, mail exchanger = aspmx.l.google.com icsanluca-bovalino.edu.it	MX preference = 5, mail exchanger = alt2.aspmx.l.google.com icsanluca-bovalino.edu.it	MX preference = 5, mail exchanger = alt1.aspmx.l.google.com icsanluca-bovalino.edu.it	MX preference = 10, mail exchanger = alt3.aspmx.l.google.com icsanluca-bovalino.edu.it	MX preference = 10, mail exchanger = alt4.aspmx.l.google.com ;USA

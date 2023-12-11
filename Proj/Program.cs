@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Globalization;
 using System.Diagnostics;
+using epu;
 
 class Program
 {
@@ -10,67 +11,83 @@ class Program
     {
         string inputFileName = "SCUANAGRAFESTAT20232420230901.csv"; // Nome del file CSV di input
         string outputFileName = "ScuoleCheUsanoENonUsano.csv"; // Nome del file di output CSV
+        string percorsoFile = "ScuolEpuration.csv";
         string inputFilePath = Path.Combine(Directory.GetCurrentDirectory(), inputFileName);
+        string inputFileEpuPath = Path.Combine(Directory.GetCurrentDirectory(), percorsoFile);
         string outputFilePath = Path.Combine(Directory.GetCurrentDirectory(), outputFileName);
-        int columnIndex = 18; 
         int nScuole;
-
+        List<string> risultatiDomainChecker = new List<string>();
         try
         {
-            var lines = File.ReadLines(inputFilePath).Skip(1).Take(50);//.Take(5)
+            //controlla se esiste già il file "ScuolEpuration", in tal caso non viene eseguito l'if
+            if (!File.Exists(percorsoFile)){
+                Epuration ist= new Epuration();
+                 ist.RemoveDuplicateRows(inputFileName);
+            }
+
+            var lines = File.ReadLines(inputFileEpuPath).Skip(1).Take(25000);//.Take(5)
             nScuole=lines.Count();
             int i=0;
-            using (var writer = new StreamWriter(outputFilePath))
+            string lowerLine;
+            foreach (string line in lines)
             {
-                writer.WriteLine("DominioScuola;StatoDominio;Output;Google_Or_Microsoft");
-
-                foreach (string line in lines)
-                {
-                    if(i%100==0)EseguiComandoFlushDns();
-                    i++;
-                    Console.WriteLine($"Esecuzione in corso: {i}/{nScuole}");
-                    
-                    string[] columns = line.Split(',');
-                    //effettuare controllo di ridondanza del nuovo file csv
-                    if (columns[columnIndex].Contains("Non Disponibile"))
-                    {
-                        writer.WriteLine("Non Disponibile;ND;ND;ND");
+                if(i%100==0)EseguiComandoFlushDns();
+                i++;
+                Console.Write($"Esecuzione in corso: {i}/{nScuole}\r");
                 
-                    }
-                    else /*if(columns[columnIndex].Contains("www.") | columns[columnIndex].Contains("https//") | columns[columnIndex].Contains("http//") | columns[columnIndex].Contains("/"))*/
+                
+                //effettuare controllo di ridondanza del nuovo file csv
+                if (line.Contains("Non Disponibile"))
+                {
+                    risultatiDomainChecker.Add("Non Disponibile;ND;ND;ND");
+            
+                }
+                else if(line.Contains("Doppione"))
+                {
+                    risultatiDomainChecker.Add($"{line};Doppione;Doppione;Doppione");
+                }
+                else /*if(lowerLine.Contains("www.") | lowerLine.Contains("https//") | lowerLine.Contains("http//") | lowerLine.Contains("/"))*/
+                {
+                    lowerLine=line.ToLower();  
+
+                    if(lowerLine.Contains("www."))
                     {
-                        columns[columnIndex]=columns[columnIndex].ToLower();  
-
-                        if(columns[columnIndex].Contains("www."))
-                        {
-                            columns[columnIndex]=columns[columnIndex].Replace("www.", "");  
-                        }
-                        
-                        if(columns[columnIndex].Contains("w.w.w."))
-                        {
-                            columns[columnIndex]=columns[columnIndex].Replace("w.w.w.", "");  
-                        }
-                        if(columns[columnIndex].Contains("https"))
-                        {
-                            columns[columnIndex]=columns[columnIndex].Replace("https", "");  
-                        }
-                        if(columns[columnIndex].Contains("http"))
-                        {
-                            columns[columnIndex]=columns[columnIndex].Replace("http", "");  
-                        }
-                        if(columns[columnIndex].Contains("/"))
-                        {
-                            columns[columnIndex]=columns[columnIndex].Replace("/", "");  
-                        }
-                        string[] output=DomainChecker(columns[columnIndex]);
-                        writer.WriteLine($"{output[0]};{output[1]};{output[2]};{output[3]}");
-
+                        lowerLine=lowerLine.Replace("www.", "");  
                     }
                     
+                    if(lowerLine.Contains("w.w.w."))
+                    {
+                        lowerLine=lowerLine.Replace("w.w.w.", "");  
+                    }
+                    if(lowerLine.Contains("https"))
+                    {
+                        lowerLine=lowerLine.Replace("https", "");  
+                    }
+                    if(lowerLine.Contains("http"))
+                    {
+                        lowerLine=lowerLine.Replace("http", "");  
+                    }
+                    if(lowerLine.Contains("/"))
+                    {
+                        lowerLine=lowerLine.Replace("/", "");  
+                    }
+                    string[] output=DomainChecker(lowerLine);    
+                    risultatiDomainChecker.Add($"{output[0]};{output[1]};{output[2]};{output[3]}");
+            
+                }
+                
+            }
+            using (var writer = new StreamWriter(outputFilePath))
+            {    
+                writer.WriteLine("DominioScuola;StatoDominio;Output;Google_Or_Microsoft");
+                foreach (var risultato in risultatiDomainChecker)
+                {
+                    writer.WriteLine(risultato);
                 }
                 writer.Close();
+                Console.WriteLine("Salvataggio completato");
             }
-            Console.WriteLine($"Il contenuto delle colonne è stato salvato nel file: {outputFilePath}");
+            Console.WriteLine($"Percorso file: {outputFilePath}");
         }
         catch (IOException ex)
         {
@@ -81,31 +98,22 @@ class Program
 
     static string[] DomainChecker(string input)
     {
-        string[] result = new string[5];
-        
+        string[] result = new string[4];
         string error;
         string output;
-
-        var comando = EseguiComandoNslookup(input, "all");
-        if(comando.Output.Length<150 & comando.Output.Length>50 | comando.Error.Contains("timed out"))
-        {   
-            Console.WriteLine("Esecuzione di txt e mx");
-            comando = EseguiComandoNslookup(input, "txt");
-            error= comando.Error;
-            output = comando.Output.Replace(Environment.NewLine, " ");
-
-            comando = EseguiComandoNslookup(input, "mx");
-            error= error + comando.Error;
-            output= output + comando.Output;
-            output = output.Replace(Environment.NewLine, " ");
-        }
-        else
-        {
-            error= comando.Error;
-            output = comando.Output.Replace(Environment.NewLine, " ");
-        }
-                
         var i=0;
+
+        //Console.WriteLine("Esecuzione di txt e mx");
+
+        var comando = EseguiComandoNslookup(input, "txt");
+        error= comando.Error;
+        output = comando.Output.Replace(Environment.NewLine, " ");
+
+        comando = EseguiComandoNslookup(input, "mx");
+        error= error + comando.Error;
+        output= output + comando.Output;
+        output = output.Replace(Environment.NewLine, " ");
+           
         do
         {
             if(error.Contains("Non-existent") == true|output.Contains("timed out") == true)
@@ -115,35 +123,24 @@ class Program
                     if(i==-1)
                     {
                         result[0]=input;
-                        result[2]="ND";
-                        result[3]="ND";
+                        result[2]="Er";
+                        result[3]="Er";
                     }
                     i--;
 
-                    comando = EseguiComandoNslookup(input, "all");
-                    if(comando.Output.Length<150 & comando.Output.Length>50 | comando.Error.Contains("timed out"))
-                    {   
-                        Console.WriteLine("Esecuzione di txt e mx");
-                        comando = EseguiComandoNslookup(input, "txt");
-                        error= comando.Error;
-                        output = comando.Output.Replace(Environment.NewLine, " ");
+                    comando = EseguiComandoNslookup(input, "txt");
+                    error = comando.Error;
+                    output = comando.Output.Replace(Environment.NewLine, " ");
 
-                        comando = EseguiComandoNslookup(input, "mx");
-                        error= error + comando.Error;
-                        output= output + comando.Output;
-                        output = output.Replace(Environment.NewLine, " ");
-                    }
-                    else
-                    {
-                        error= comando.Error;
-                        output = comando.Output.Replace(Environment.NewLine, " ");
-                    }
-                    
+                    comando = EseguiComandoNslookup(input, "mx");
+                    error = error + comando.Error;
+                    output = output + comando.Output;
+                    output = output.Replace(Environment.NewLine, " ");
 
                 }
                 else
                 {
-                    if( output.Contains("ASPMX.L.GOOGLE.COM") | output.Contains("google-site-verification") | output.Contains("spf.google") |  output.Contains("MS=") | output.Contains("outlook.com") | output.Contains("spf.protection.outlook"))
+                    if( output.Contains("GOOGLE") | output.Contains("google") |  output.Contains("MS=") | output.Contains("outlook"))
                     {
                         i++;
                         result[0]=input;
@@ -182,7 +179,7 @@ class Program
         {
             string comando = $"nslookup -q={tipoRecord} {dominio} | findstr /V /C:\"Address:\" /C:\"Server:\"";
 
-            var process = new Process
+            using (var process = new Process
             {
                 StartInfo = new ProcessStartInfo
                 {
@@ -193,12 +190,13 @@ class Program
                     UseShellExecute = false,
                     CreateNoWindow = true
                 }
-            };
-
+            })
+            {
             process.Start();
             output = process.StandardOutput.ReadToEnd();
             error = process.StandardError.ReadToEnd();
             process.WaitForExit();
+            }
         }
         catch (Exception ex)
         {

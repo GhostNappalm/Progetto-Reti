@@ -8,27 +8,23 @@ using System.IO;
       //controllo (all'interno del ciclo) per ogni riga del numero di occorrenze di "DENOMINAZIONEISTITUTORIFERIMENTO" maggiore ad 1
       //in caso di esito positivo viene lasciata la prima occorrenza e tutte le altre vengono eliminate
 
-
-namespace CsvProcessing
+namespace epu{
+public class Epuration 
 {
-class Program 
-{
-    // Percorso del file CSV
-    string filePath = "ProvaEpuration.csv";
-
-    static void RemoveDuplicateRows(string filePath)
-    {
+        // Percorso del file CSV
         // Leggi il file e rimuovi le righe duplicate
-        RemoveDuplicateRows(filePath);
-
-        Console.WriteLine("Operazione completata.");
+    
+    public void RemoveDuplicateRows(string filePath)
+    {
+        string outputfilePath2 = "ScuolEpuration.csv";
+        
         try
         {
             // Leggi tutte le righe dal file
             string[] lines = File.ReadAllLines(filePath);
 
-            // Creazione di un insieme per tenere traccia delle città già incontrate
-            HashSet<string> citiesSet = new HashSet<string>();
+            // Creazione di un insieme per tenere traccia delle scuole già incontrate
+            HashSet<string> DominiDup = new HashSet<string>();
 
             // Lista per tenere traccia delle righe non duplicate
             List<string> uniqueRows = new List<string>();
@@ -39,16 +35,24 @@ class Program
                 // Split della riga per ottenere i singoli campi
                 string[] fields = line.Split(',');
 
-                // Controllo se il campo "Città" è già stato incontrato
-                if (fields.Length > 3 && citiesSet.Add(fields[3]))
+                // Controllo se il campo "SITOWEB" è già stato incontrato
+                if (fields.Length > 18 && DominiDup.Add(fields[18]))
                 {
-                    // Se è la prima occorrenza, aggiungi la riga alla lista
-                    uniqueRows.Add(line);
+                    // Stampa della colonna "SITOWEB" nel nuovo file "ScuolEpuration.csv"
+                    uniqueRows.Add(fields[18]);
+                }
+                else if(!fields[18].Contains("Non Disponibile"))
+                {
+                    uniqueRows.Add("Doppione");
+                }
+                else
+                {
+                    uniqueRows.Add("Non Disponibile");
                 }
             }
-
             // Sovrascrivi il file con le righe non duplicate
-            File.WriteAllLines(filePath, uniqueRows);
+            File.WriteAllLines(outputfilePath2, uniqueRows);
+            Console.WriteLine("Operazione completata.");
         }
         catch (Exception ex)
         {
@@ -56,5 +60,4 @@ class Program
         }
     }
 }
-
 }
