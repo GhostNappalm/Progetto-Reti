@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\basom\\.nuget\\packages\\": {}
+    "/Users/gianpierovenuto/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\basom\\Desktop\\universita\\Terzo anno\\Secondo semestre\\Reti\\Elaborato\\Progetto-Reti\\Proj\\Proj.csproj",
+      "projectUniqueName": "/Users/gianpierovenuto/Documents/GitHub/Progetto-Reti/Proj/Proj.csproj",
       "projectName": "Proj",
-      "projectPath": "C:\\Users\\basom\\Desktop\\universita\\Terzo anno\\Secondo semestre\\Reti\\Elaborato\\Progetto-Reti\\Proj\\Proj.csproj",
-      "packagesPath": "C:\\Users\\basom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\basom\\Desktop\\universita\\Terzo anno\\Secondo semestre\\Reti\\Elaborato\\Progetto-Reti\\Proj\\obj\\",
+      "projectPath": "/Users/gianpierovenuto/Documents/GitHub/Progetto-Reti/Proj/Proj.csproj",
+      "packagesPath": "/Users/gianpierovenuto/.nuget/packages/",
+      "outputPath": "/Users/gianpierovenuto/Documents/GitHub/Progetto-Reti/Proj/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\basom\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/gianpierovenuto/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/Cellar/dotnet/8.0.0/libexec/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
