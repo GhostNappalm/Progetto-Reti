@@ -15,7 +15,7 @@ class Program
         string inputFilePath = Path.Combine(Directory.GetCurrentDirectory(), inputFileName);
         string inputFileEpuPath = Path.Combine(Directory.GetCurrentDirectory(), percorsoFile);
         string outputFilePath = Path.Combine(Directory.GetCurrentDirectory(), outputFileName);
-        int nScuole;
+        int nScuole; 
         List<string> risultatiDomainChecker = new List<string>();
         try
         {

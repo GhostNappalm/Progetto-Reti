@@ -396,3 +396,12 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+*.cache
+*.cache
+*.dll
+Proj/obj/Debug/net8.0/Proj.GeneratedMSBuildEditorConfig.editorconfig
+Proj/obj/Debug/net8.0/Proj.assets.cache
+Proj/obj/Debug/net8.0/Proj.AssemblyInfoInputs.cache
+Proj/obj/Debug/net8.0/Proj.AssemblyInfo.cs
+Proj/bin/Debug/net8.0/Proj.exe
+Proj/bin/Debug/net8.0/Proj.dll
