@@ -25,15 +25,15 @@ class Program
                  ist.RemoveDuplicateRows(inputFileName);
             }
 
-            var lines = File.ReadLines(inputFileEpuPath).Skip(1).Take(25);//.Take(5)
+            var lines = File.ReadLines(inputFileEpuPath).Skip(25000);//.Take(5)
             nScuole=lines.Count();
             int i=0;
             string lowerLine;
             foreach (string line in lines)
             {
-                if(i%100==0)EseguiComandoFlushDns();
+                if(i%1000==0)EseguiComandoFlushDns();
                 i++;
-                Console.Write($"Esecuzione in corso: {i}/{nScuole}  |   Dominio analizzato: {line}\r");
+                Console.Write($"Esecuzione in corso: {i}/{nScuole}  |   Dominio analizzato: {line}                        \r");
                 
                 
                 //effettuare controllo di ridondanza del nuovo file csv
@@ -46,9 +46,9 @@ class Program
                 {
                     risultatiDomainChecker.Add($"{line};Doppione;Doppione;Doppione");
                 }
-                else /*if(lowerLine.Contains("www.") | lowerLine.Contains("https//") | lowerLine.Contains("http//") | lowerLine.Contains("/"))*/
+                else
                 {
-                    lowerLine=line.ToLower();  
+                    lowerLine=line.ToLower(); 
 
                     if(lowerLine.Contains("www."))
                     {
@@ -85,7 +85,7 @@ class Program
                     writer.WriteLine(risultato);
                 }
                 writer.Close();
-                Console.WriteLine("Salvataggio completato");
+                Console.WriteLine("\nSalvataggio completato");
             }
             Console.WriteLine($"Percorso file: {outputFilePath}");
         }
@@ -201,6 +201,7 @@ class Program
         catch (Exception ex)
         {
             error = $"Errore durante l'esecuzione di nslookup -q={tipoRecord} {dominio}: {ex.Message}";
+            output = "Exception";
         }
 
         return (Output: output, Error: error);
