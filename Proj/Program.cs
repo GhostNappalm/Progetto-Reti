@@ -87,7 +87,7 @@ class Program
                     }
                     if(line.Length<5)
                     {
-                        risultatiDomainChecker.Add($"{line};Errato;Er;Er");
+                        risultatiDomainChecker.Add($"{lowerLine};Errato;Er;Er");
                     }
                     else
                     {
