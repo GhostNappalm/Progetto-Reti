@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Proj
-build_property.ProjectDir = C:\Users\basom\Desktop\universita\Terzo anno\Secondo semestre\Reti\Elaborato\Progetto-Reti\Proj\
+build_property.ProjectDir = /Users/gianpierovenuto/Documents/GitHub/Progetto-Reti/Proj/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
