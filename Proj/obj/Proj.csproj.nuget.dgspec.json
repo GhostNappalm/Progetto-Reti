@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/gianpierovenuto/Documents/GitHub/Progetto-Reti/Proj/Proj.csproj": {}
+    "/Users/mattiavenuto/Documents/GitHub/Progetto-Reti/Proj/Proj.csproj": {}
   },
   "projects": {
-    "/Users/gianpierovenuto/Documents/GitHub/Progetto-Reti/Proj/Proj.csproj": {
+    "/Users/mattiavenuto/Documents/GitHub/Progetto-Reti/Proj/Proj.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/gianpierovenuto/Documents/GitHub/Progetto-Reti/Proj/Proj.csproj",
+        "projectUniqueName": "/Users/mattiavenuto/Documents/GitHub/Progetto-Reti/Proj/Proj.csproj",
         "projectName": "Proj",
-        "projectPath": "/Users/gianpierovenuto/Documents/GitHub/Progetto-Reti/Proj/Proj.csproj",
-        "packagesPath": "/Users/gianpierovenuto/.nuget/packages/",
-        "outputPath": "/Users/gianpierovenuto/Documents/GitHub/Progetto-Reti/Proj/obj/",
+        "projectPath": "/Users/mattiavenuto/Documents/GitHub/Progetto-Reti/Proj/Proj.csproj",
+        "packagesPath": "/Users/mattiavenuto/.nuget/packages/",
+        "outputPath": "/Users/mattiavenuto/Documents/GitHub/Progetto-Reti/Proj/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/gianpierovenuto/.nuget/NuGet/NuGet.Config"
+          "/Users/mattiavenuto/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/Cellar/dotnet/8.0.0/libexec/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
