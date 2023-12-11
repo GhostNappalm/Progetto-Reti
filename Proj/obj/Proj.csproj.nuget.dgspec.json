@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mattiavenuto/Documents/GitHub/Progetto-Reti/Proj/Proj.csproj": {}
+    "C:\\Users\\basom\\Desktop\\universita\\Terzo anno\\Secondo semestre\\Reti\\Elaborato\\Progetto-Reti\\Proj\\Proj.csproj": {}
   },
   "projects": {
-    "/Users/mattiavenuto/Documents/GitHub/Progetto-Reti/Proj/Proj.csproj": {
+    "C:\\Users\\basom\\Desktop\\universita\\Terzo anno\\Secondo semestre\\Reti\\Elaborato\\Progetto-Reti\\Proj\\Proj.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mattiavenuto/Documents/GitHub/Progetto-Reti/Proj/Proj.csproj",
+        "projectUniqueName": "C:\\Users\\basom\\Desktop\\universita\\Terzo anno\\Secondo semestre\\Reti\\Elaborato\\Progetto-Reti\\Proj\\Proj.csproj",
         "projectName": "Proj",
-        "projectPath": "/Users/mattiavenuto/Documents/GitHub/Progetto-Reti/Proj/Proj.csproj",
-        "packagesPath": "/Users/mattiavenuto/.nuget/packages/",
-        "outputPath": "/Users/mattiavenuto/Documents/GitHub/Progetto-Reti/Proj/obj/",
+        "projectPath": "C:\\Users\\basom\\Desktop\\universita\\Terzo anno\\Secondo semestre\\Reti\\Elaborato\\Progetto-Reti\\Proj\\Proj.csproj",
+        "packagesPath": "C:\\Users\\basom\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\basom\\Desktop\\universita\\Terzo anno\\Secondo semestre\\Reti\\Elaborato\\Progetto-Reti\\Proj\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/mattiavenuto/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\basom\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

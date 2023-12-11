@@ -25,7 +25,7 @@ class Program
                  ist.RemoveDuplicateRows(inputFileName);
             }
 
-            var lines = File.ReadLines(inputFileEpuPath).Skip(25000);//.Take(5)
+            var lines = File.ReadLines(inputFileEpuPath).Skip(1);//.Take(5)
             nScuole=lines.Count();
             int i=0;
             string lowerLine;
@@ -46,9 +46,23 @@ class Program
                 {
                     risultatiDomainChecker.Add($"{line};Doppione;Doppione;Doppione");
                 }
+                else if(line.Length<5)
+                {
+                    risultatiDomainChecker.Add($"{line};Errato;Er;Er");
+                }
                 else
                 {
                     lowerLine=line.ToLower(); 
+
+                    if(lowerLine.Contains("-"))
+                    {
+                        lowerLine=lowerLine.Replace("-", "");  
+                    }
+
+                    if(lowerLine.Contains(" "))
+                    {
+                        lowerLine=lowerLine.Replace(" ", "");  
+                    }
 
                     if(lowerLine.Contains("www."))
                     {
@@ -71,8 +85,16 @@ class Program
                     {
                         lowerLine=lowerLine.Replace("/", "");  
                     }
-                    string[] output=DomainChecker(lowerLine);    
-                    risultatiDomainChecker.Add($"{output[0]};{output[1]};{output[2]};{output[3]}");
+                    if(line.Length<5)
+                    {
+                        risultatiDomainChecker.Add($"{line};Errato;Er;Er");
+                    }
+                    else
+                    {
+                        string[] output=DomainChecker(lowerLine);    
+                        risultatiDomainChecker.Add($"{output[0]};{output[1]};{output[2]};{output[3]}");
+                    }
+                    
             
                 }
                 
