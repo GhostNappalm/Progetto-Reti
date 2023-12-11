@@ -25,7 +25,7 @@ class Program
                  ist.RemoveDuplicateRows(inputFileName);
             }
 
-            var lines = File.ReadLines(inputFileEpuPath).Skip(1).Take(25000);//.Take(5)
+            var lines = File.ReadLines(inputFileEpuPath).Skip(1).Take(25);//.Take(5)
             nScuole=lines.Count();
             int i=0;
             string lowerLine;
@@ -33,7 +33,7 @@ class Program
             {
                 if(i%100==0)EseguiComandoFlushDns();
                 i++;
-                Console.Write($"Esecuzione in corso: {i}/{nScuole}\r");
+                Console.Write($"Esecuzione in corso: {i}/{nScuole}  |   Dominio analizzato: {line}\r");
                 
                 
                 //effettuare controllo di ridondanza del nuovo file csv
