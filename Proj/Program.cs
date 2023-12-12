@@ -12,7 +12,6 @@ class Program
         string inputFileName = "SCUANAGRAFESTAT20232420230901.csv"; // Nome del file CSV di input
         string outputFileName = "ScuoleCheUsanoENonUsano.csv"; // Nome del file di output CSV
         string percorsoFile = "ScuolEpuration.csv";
-        string inputFilePath = Path.Combine(Directory.GetCurrentDirectory(), inputFileName);
         string inputFileEpuPath = Path.Combine(Directory.GetCurrentDirectory(), percorsoFile);
         string outputFilePath = Path.Combine(Directory.GetCurrentDirectory(), outputFileName);
         int nScuole; 
@@ -25,7 +24,7 @@ class Program
                  ist.RemoveDuplicateRows(inputFileName);
             }
 
-            var lines = File.ReadLines(inputFileEpuPath).Skip(1);//.Take(5)
+            var lines = File.ReadLines(inputFileEpuPath).Skip(781).Take(5);//.Take(5)
             nScuole=lines.Count();
             int i=0;
             string lowerLine;
@@ -46,10 +45,6 @@ class Program
                 {
                     risultatiDomainChecker.Add($"{line};Doppione;Doppione;Doppione");
                 }
-                else if(line.Length<5)
-                {
-                    risultatiDomainChecker.Add($"{line};Errato;Er;Er");
-                }
                 else
                 {
                     lowerLine=line.ToLower(); 
@@ -57,6 +52,10 @@ class Program
                     if(lowerLine.Contains("-"))
                     {
                         lowerLine=lowerLine.Replace("-", "");  
+                    }
+                    if(lowerLine.Contains("\""))
+                    {
+                        lowerLine=lowerLine.Replace("\"", "");  
                     }
 
                     if(lowerLine.Contains(" "))
@@ -91,8 +90,8 @@ class Program
                     }
                     else
                     {
-                        string[] output=DomainChecker(lowerLine);    
-                        risultatiDomainChecker.Add($"{output[0]};{output[1]};{output[2]};{output[3]}");
+                        string[] output=DomainChecker(lowerLine); 
+                        risultatiDomainChecker.Add($"{output[0]};{output[1]};{output[2].Replace(";", " ")};{output[3]}");
                     }
                     
             

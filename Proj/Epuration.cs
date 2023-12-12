@@ -52,7 +52,7 @@ public class Epuration
             }
             // Sovrascrivi il file con le righe non duplicate
             File.WriteAllLines(outputfilePath2, uniqueRows);
-            Console.WriteLine("Operazione completata.");
+            Console.WriteLine($"Operazione completata, toto righe: {uniqueRows.Count}");
         }
         catch (Exception ex)
         {
