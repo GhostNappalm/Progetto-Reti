@@ -24,7 +24,7 @@ class Program
                  ist.RemoveDuplicateRows(inputFileName);
             }
 
-            var lines = File.ReadLines(inputFileEpuPath).Skip(781).Take(5);//.Take(5)
+            var lines = File.ReadLines(inputFileEpuPath).Skip(1);//.Take(5)
             nScuole=lines.Count();
             int i=0;
             string lowerLine;
@@ -32,10 +32,7 @@ class Program
             {
                 if(i%1000==0)EseguiComandoFlushDns();
                 i++;
-                Console.Write($"Esecuzione in corso: {i}/{nScuole}  |   Dominio analizzato: {line}                        \r");
-                
-                
-                //effettuare controllo di ridondanza del nuovo file csv
+                Console.Write($"Esecuzione in corso: {i}/{nScuole}  |   Dominio analizzato: {line}     \r");
                 if (line.Contains("Non Disponibile"))
                 {
                     risultatiDomainChecker.Add("Non Disponibile;ND;ND;ND");
@@ -84,7 +81,7 @@ class Program
                     {
                         lowerLine=lowerLine.Replace("/", "");  
                     }
-                    if(line.Length<5)
+                    if(lowerLine.Length<5)
                     {
                         risultatiDomainChecker.Add($"{lowerLine};Errato;Er;Er");
                     }
